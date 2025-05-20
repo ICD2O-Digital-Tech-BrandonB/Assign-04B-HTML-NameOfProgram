@@ -1,9 +1,132 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+
+      <!--Meta Data-->
+      <meta charset="utf-8">
+      <meta name="description" content="Food Order">
+      <meta name="keyboard" content="immaculata, icd2o">
+      <meta name="author" content="BrandonBCode">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Allows the Use of Favicons-->
+      <link rel="apple-touch-icon" sizes="180x180" href="./faviconassign4/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./faviconassign4/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./faviconassign4/favicon-16x16.png">
+      <link rel="manifest" href="./faviconassign4/site.webmanifest">
+
+      <!--Google's MDL Crucial Code-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"> 
+
+      <!--Links CSS to HTML-->
+      <link rel="stylesheet" href="./css/style.css">
+
+      <!--Browser Tab Title-->
+    <title>Hamburger Food Stand</title>
   </head>
   <body>
-    <p>Paragraph</p>
+
+    <!--MDL Crucial Code-->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!--Links JS to HTML-->
+    <script src="./js/script.js"></script>
+
+    <!--MDL Header-->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Hamburger Heaven Ordering Station</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+
+    <!--Header-->
+    <h1>Welcome to Hamburger Heaven</h1>
+
+    <!--Allows you to use an image on HTML-->
+    <img src="./images/burger.jpg" alt="Burger" class="center" >
+
+    <!--Header-->
+    <h2>Build Your Burger!</h2>
+
+    <!--Header-->
+    <h3>Choose Your Burger Size!</h3>
+  
+    <!--Selection Options for Medium Burger Size-->
+    <label for="medBurger">Medium Burger:</label>
+    <select id="medBurger">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!--Selection Options for Large Burger Size-->
+    <label for="larBurger">Large Burger:</label>
+    <select id="larBurger">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!--Header-->
+    <h3>Toppings (Group 1 - $0.45 each)</h3>
+
+    <!--Selection Options for Lettuce Topping-->
+    <label for="Lettuce">Lettuce:</label>
+    <select id="Lettuce">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!--Selection Options for Tomato Topping-->
+    <label for="Tomato">Tomato:</label>
+    <select id="Tomato">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!--Selection Options for Pickle Topping-->
+    <label for="Pickle">Pickle:</label>
+    <select id="Pickle">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!--Selection Options for Onion Topping-->
+    <label for="Onion">Onion:</label>
+    <select id="Onion">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!--Header-->
+    <h3>Toppings (Group 2 - $0.65 each)</h3>
+
+    <!--Selection Options for Bacon Topping-->
+    <label for="Bacon">Bacon:</label>
+    <select id="Bacon">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!--Selection Options for Cheese Topping-->
+    <label for="Cheese">Cheese:</label>
+    <select id="Cheese">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+    </select><br><br>
+
+    <!-- Raised button with ripple -->
+    <button
+    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+    onclick="calculateOrder()"> Calculate Total
+  </button>
+  <br/>
+
+    <!--Location for where to display the message-->
+    <div id="outputSubTotal"></div>
+    <div id="outputTax"></div>
+    <div id="outputTotal"></div>
+    <br>
   </body>
 </html>
